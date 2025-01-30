@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CE Consult</title>
+
+    <!-- Tailwind CSS über eine eigene CSS-Datei einbinden -->
+    <link rel="stylesheet" href="output.css">
+
+</head>
+
+<body class="text-gray-900 bg-white">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-background backdrop-blur-sm">
+        <div class="container mx-auto flex justify-between items-center p-2">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="assets/images/ceconsult_logo.png" alt="CE Consult Logo" class="h-10">
+            </a>
+
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-6 text-sm">
+                <a href="#about" class="hover:text-accent-red">Über uns</a>
+                <a href="#services" class="hover:text-accent-red">Leistungen</a>
+                <a href="#locations" class="hover:text-accent-red">Standorte</a>
+            </nav>
+
+            <!-- Kontakt Button -->
+            <a href="#contact"
+                class="hidden md:block bg-accent-gold text-white px-6 py-1 rounded-full text-lg font-medium shadow-md
+           hover:scale-105 hover:shadow-lg active:shadow-inner active:scale-100 transition-all duration-200 will-change-transform">
+                Kontakt
+            </a>
+
+            <!-- Hamburger Menü -->
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+                <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+                <span class="block w-6 h-0.5 bg-gray-800"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menü -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white hidden flex-col items-center justify-center space-y-6 text-2xl text-gray-900 transition-all duration-300">
+            <button id="close-menu" class="absolute top-6 right-6 text-3xl">&times;</button>
+            <a href="#about" class="hover:text-accent-red">Über uns</a>
+            <a href="#services" class="hover:text-accent-red">Leistungen</a>
+            <a href="#locations" class="hover:text-accent-red">Standorte</a>
+            <a href="#contact"
+                class="hidden md:block bg-accent-gold text-white px-6 py-1 rounded-full text-lg font-medium shadow-md
+           hover:scale-105 hover:shadow-lg active:shadow-inner active:scale-100 transition-all duration-200 will-change-transform">
+                Kontakt
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative w-full">
+        <div class="w-full">
+            <img src="assets/images/hero-img.png" alt="Handshake" class="w-full h-auto xs:mt-10">
+        </div>
+        <div class="max-w-3xl mx-auto text-center px-6 mt-20 fade-in">
+            <h1 class="text-3xl md:text-3xl font-bold text-accent-red mb-4">CE Consult wird Teil von BrandVerstand!</h1>
+            <p class="text-lg text-gray-800 leading-relaxed mt-2 inline-block">
+                Gemeinsam bündeln wir unsere Expertise, um Ihnen noch innovativere Lösungen im Bereich Brandschutz und
+                Arbeitssicherheit zu bieten.
+                Vertrauen Sie auf professionelle Beratung, Planung und Umsetzung – für maximale Sicherheit in allen
+                Gebäudetypen.
+            </p>
+            <a href="#about"
+                class="mt-3 inline-block text-lg font-bold relative group text-gray-900 transition-all duration-300 group-hover:text-accent-red">
+                <span class="relative inline-block">
+                    Mehr Erfahren
+                    <span
+                        class="absolute left-0 bottom-0 w-0 h-0.5 bg-accent-red transition-all duration-300 group-hover:w-full">
+                    </span>
+                </span>
+            </a>
+            <div class="mt-6">
+                <a href="https://brand-verstand.de"
+                    class="inline-flex items-center justify-center bg-accent-red text-white px-6 py-3 rounded-full text-lg font-medium shadow-md 
+                           hover:scale-102 hover:shadow-lg active:shadow-inner active:scale-100 transition-all duration-200">
+                    <img src="assets/icons/arrow-pointer-solid.svg" alt="Pfeil"
+                        class="w-5 h-5 mr-2 transform scale-x-[-1] transition-all duration-200 0">
+                    Zu BrandVerstand wechseln
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner  -->
+
+    <section id="banner" class="mt-40 bg-gray-100 text-gray-900 py-6">
+        <div class="container mx-auto flex items-center justify-between px-6 max-w-5xl">
+            <!-- Linkes Logo -->
+            <img src="assets/images/ceconsult_icon.png" alt="CE Consult" class="h-12 md:h-16">
+
+            <!-- Text -->
+            <p class="text-center text-lg md:text-xl font-medium">
+                Wir bieten Ihnen Kompetenz und umfassende Leistungen für den <br>
+                Brandschutz bei allen Arten von Gebäuden
+            </p>
+
+            <!-- Rechtes Logo -->
+            <img src="assets/images/brandverstand_icon.png" alt="BrandVerstand" class="h-12 md:h-16">
+        </div>
+    </section>
+
+    <!-- statement Section -->
+    <section id="statement" class="flex justify-center px-4 mt-40">
+        <div
+            class="card-container bg-white shadow-lg rounded-4xl max-w-4xl w-full p-6 flex items-center justify-between">
+            <!-- Linker Bereich: Profilbild & Name -->
+            <div class="left-section">
+                <img src="assets/images/dMoWaDpiWwCYcGPDtKo3ejJbQape.png" alt="Ralf Michael" class="avatar">
+                <div class="contact-info">
+                    <p class="name">Ralf Michael</p>
+                    <p>📧 <span>Mail</span></p>
+                    <p>📞 <span>Telefon</span></p>
+                </div>
+            </div>
+
+            <!-- Rechter Bereich: Statement -->
+            <div class="right-section">
+                <p>
+                    Liebe Kunden,<br><br>
+                    nach nun mehr als zehnjähriger Tätigkeit als Sachverständiger und Partner bei CE Consult gehe ich ab
+                    Februar diesen Jahres neue Wege, wobei die Richtung bleibt.<br><br>
+                    Aufgrund interner personeller Änderung habe ich mich entschlossen, an der Seite eines neuen starken
+                    Partners Ihnen auch weiterhin die gewohnte fachliche Betreuung bieten zu können.<br><br>
+                    Ich bin überzeugt, dass durch die Zusammenarbeit mit BrandVerstand die gemeinsamen Ziele erreicht
+                    werden und freue mich auf weiterhin gute Zusammenarbeit.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über Uns -->
+    <section id="about" class="bg-gray-50 mt-40 py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-accent-gold mb-10 ">
+                Über Uns
+
+            </h2>
+            <!-- Grid-Layout mit Bild und Text -->
+            <div class="grid lg:grid-cols-2 gap-16 mb-24">
+                <!-- Bildbereich (Rechts auf Desktop, oben auf Mobile) -->
+                <div class="opacity-0 animate-fade-in-left order-last lg:order-first">
+                    <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
+                        alt="Teamarbeit"
+                        class="w-full h-96 object-cover rounded-4xl shadow-xl transition-all duration-500 hover:shadow-2xl">
+                </div>
+
+                <!-- Textbereich -->
+                <div class="opacity-0 animate-fade-in-right space-y-8">
+                    <h2 class="text-2xl font-medium text-accent-red leading-tight">
+                        Ihre Experten für Brandschutz und Arbeitssicherheit
+                    </h2>
+                    <div class="space-y-6 text-gray-600 leading-relaxed border-l-4 border-accent-gold pl-6">
+                        <p class="text-lg">CE Consult ist Ihr erfahrener Partner für Brandschutzlösungen und
+                            Arbeitssicherheit. Mit Standorten in Schwäbisch Hall, Rhein-Neckar, Karlsruhe und Lindau am
+                            Bodensee entwickeln wir individuelle Brandschutzkonzepte.</p>
+
+                        <p class="text-lg">Seit der Übernahme durch die BrandVerstand GmbH bündeln wir unsere
+                            Kompetenzen für innovative Lösungen. Gemeinsam sorgen wir für höchste Sicherheit in allen
+                            Gebäudetypen.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Werte und Vorteile -->
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Werte und Mission -->
+                <div class="opacity-0 animate-fade-in-right">
+                    <div class="bg-white p-8 rounded-4xl shadow-lg border border-gray-100">
+                        <h3 class="text-2xl text-gray-900 mb-6">Werte & Mission</h3>
+                        <p class="text-gray-600 leading-relaxed text-lg">
+                            Mit Präzision und Kundennähe entwickeln wir maßgeschneiderte Brandschutzlösungen.
+                            Von der Beratung bis zur Schulung garantieren wir Sicherheit und Gesetzeskonformität.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Vorteile -->
+                <div class="opacity-0 animate-fade-in-left">
+                    <div class="bg-white p-8 rounded-4xl shadow-lg border border-gray-100">
+                        <h3 class="text-2xl  text-gray-900 mb-8">Vorteile durch BrandVerstand</h3>
+                        <ul class="space-y-1">
+                            <li class="flex items-start group hover:bg-gray-50 p-1 rounded-4xl transition-all">
+                                <div class="flex-shrink-0 px-2 text-accent-gold">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                    </svg>
+                                </div>
+                                <span class="text-gray-600 text-lg">Erweitertes Expertennetzwerk</span>
+                            </li>
+                            <li class="flex items-start group hover:bg-gray-50 p-1 rounded-4xl transition-all">
+                                <div class="flex-shrink-0 px-2 text-accent-gold">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                    </svg>
+                                </div>
+                                <span class="text-gray-600 text-lg">Innovative Brandschutztechnologien</span>
+                            </li>
+                            <li class="flex items-start group hover:bg-gray-50 p-1 rounded-4xl transition-all">
+                                <div class="flex-shrink-0 px-2 text-accent-gold">
+                                    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                                    </svg>
+                                </div>
+                                <span class="text-gray-600 text-lg">Nahtlose Projektübergaben</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leistungen -->
+
+    <section id="services" class="flex justify-center px-4 mt-40">
+
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+
+            <!-- Linke Seite: Logo & Links -->
+            <div class="flex items-center space-x-6">
+                <img src="assets/images/ceconsult_icon.png" alt="CE Consult Logo" class="h-12">
+                <div class="text-sm text-gray-300 space-y-1">
+                    <a href="#" class="hover:underline">Impressum</a><br>
+                    <a href="#" class="hover:underline">Datenschutz</a><br>
+                    <p class="text-gray-400">&copy; 2025 CE Consult</p>
+                </div>
+            </div>
+
+            <!-- Rechte Seite: Siegel-Bilder -->
+            <div class="mt-6 md:mt-0">
+                <img src="assets/images/seal-certificates.png" alt="Zertifikate Siegel" class="h-16">
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

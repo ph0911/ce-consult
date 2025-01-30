@@ -1,0 +1,233 @@
+@import "tailwindcss";
+
+:root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --accent-red: #A41C24;
+    --accent-gold: #A88E2D;
+}
+
+.text-accent-red {
+    color: var(--accent-red);
+}
+
+.bg-accent-red {
+    background-color: var(--accent-red);
+}
+
+.text-accent-gold {
+    color: var(--accent-gold);
+}
+
+.bg-accent-gold {
+    background-color: var(--accent-gold);
+}
+
+.border-accent-red {
+    border-color: var(--accent-red);
+}
+
+.border-accent-gold {
+    border-color: var(--accent-gold);
+}
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: none;
+    /* Standardmäßig unsichtbar */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    transition: opacity 0.3s ease-in-out, transform 0.3s;
+}
+
+#mobile-menu.flex {
+    display: flex;
+    /* Aktiviert das Menü */
+}
+
+/* Native Keyframes für weiche Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-In Klasse für JS-Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Animation und Styling Statement Card */
+
+/* Card Container Styles */
+.card-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    will-change: transform;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-right: 2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.right-section {
+    flex: 2;
+    padding-left: 2rem;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.contact-info p {
+    margin: 0.4rem 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.right-section p {
+    line-height: 1.7;
+    color: #374151;
+    font-weight: 400;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .left-section {
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding-right: 0;
+        padding-bottom: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .right-section {
+        padding-left: 0;
+    }
+}
+
+/* Verbesserte Animationen */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(40px) rotate(2deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+    }
+}
+
+@keyframes fade-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-40px) rotate(-2deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.animate-fade-in-right {
+    animation: fade-in-right 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+.animate-fade-in-left {
+    animation: fade-in-left 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Footer */
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.2s ease-in-out;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer img {
+    max-height: 50px;
+    /* Falls die Siegel zu groß sind */
+}
