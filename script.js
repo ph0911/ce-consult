@@ -1,28 +1,58 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("JavaScript geladen ✅");
 
-    // Mobile Menü Steuerung
     const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
     const closeMenu = document.getElementById("close-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
 
-    if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener("click", () => {
-            console.log("Hamburger Menü geöffnet");
-            mobileMenu.classList.toggle("hidden");
-            mobileMenu.classList.toggle("flex");
-        });
+    menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.add("active");
+    });
 
-        if (closeMenu) {
-            closeMenu.addEventListener("click", () => {
-                console.log("Hamburger Menü geschlossen");
-                mobileMenu.classList.add("hidden");
-                mobileMenu.classList.remove("flex");
-            });
+    closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+    });
+
+    // Menü schließen, wenn man außerhalb des Menübereichs klickt
+    mobileMenu.addEventListener("click", (event) => {
+        if (event.target === mobileMenu) {
+            mobileMenu.classList.remove("active");
         }
-    } else {
-        console.error("Fehlende Elemente: Prüfe IDs für #menu-toggle und #mobile-menu");
-    }
+    });
+
+    // Popup für PDF
+    const openPopup = document.getElementById("open-popup");
+    const closePopup = document.getElementById("close-popup");
+    const popup = document.getElementById("pdf-popup");
+    const popupContent = document.getElementById("popup-content");
+
+    openPopup.addEventListener("click", () => {
+        popup.classList.remove("hidden");
+        setTimeout(() => {
+            popup.classList.remove("opacity-0");
+            popupContent.classList.remove("scale-95");
+        }, 10); // Verzögerung für sanfte Animation
+    });
+
+    closePopup.addEventListener("click", () => {
+        popup.classList.add("opacity-0");
+        popupContent.classList.add("scale-95");
+        setTimeout(() => {
+            popup.classList.add("hidden");
+        }, 300); // Nach der Animation ausblenden
+    });
+
+    // Popup schließen, wenn außerhalb geklickt wird
+    popup.addEventListener("click", (event) => {
+        if (event.target === popup) {
+            popup.classList.add("opacity-0");
+            popupContent.classList.add("scale-95");
+            setTimeout(() => {
+                popup.classList.add("hidden");
+            }, 300);
+        }
+    });
+
     // 3D Hover Effekt für die Karte
     const card = document.querySelector(".card-container");
     const perspective = 1000;

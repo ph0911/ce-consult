@@ -31,26 +31,86 @@
     border-color: var(--accent-gold);
 }
 
+/* Navigation Links - Desktop */
+.nav-link {
+    position: relative;
+    padding: 8px 12px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-red);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-red);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Navigation Links - Mobile */
+.nav-link-mobile {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-link-mobile:hover {
+    color: #d10024;
+}
+
+/* Mobile Menü Styling */
 #mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-    display: none;
-    /* Standardmäßig unsichtbar */
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    z-index: 50;
-    transition: opacity 0.3s ease-in-out, transform 0.3s;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-#mobile-menu.flex {
-    display: flex;
-    /* Aktiviert das Menü */
+/* Klasse, die das Menü sichtbar macht */
+#mobile-menu.active {
+    opacity: 1;
+    transform: translateY(0);
 }
+
+/* Mobile-Menü Schließen-Button */
+#close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #A41C24;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#close-menu:hover {
+    color: #d10024;
+}
+
 
 /* Native Keyframes für weiche Fade-In Animation */
 @keyframes fadeIn {
@@ -214,6 +274,69 @@
 
 .animate-fade-in-left {
     animation: fade-in-left 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* Service cards */
+
+.service-card {
+    position: relative;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Animationen */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* CTA Kontakt */
+/* Custom transitions for smooth overlay effect */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.group-hover\:-translate-y-full:hover * {
+    transform: translateY(-100%);
+}
+
+.translate-y-full {
+    transform: translateY(100%);
+}
+
+.group-hover\:translate-y-0:hover * {
+    transform: translateY(0);
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.group-hover\:opacity-100:hover * {
+    opacity: 1;
 }
 
 /* Footer */
