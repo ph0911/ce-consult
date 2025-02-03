@@ -60,8 +60,8 @@
 
     <!-- Hero Section -->
     <section class="relative w-full">
-        <div class="w-full">
-            <img src="assets/images/hero-img.png" alt="Handshake" class="w-full h-auto xs:mt-10">
+        <div class="w-full mt-[120px] lg:mt-0">
+            <img src="assets/images/hero-img.png" alt="Handshake" class="relative w-full h-auto  ">
         </div>
         <div class="max-w-3xl mx-auto text-center px-6 mt-20 fade-in">
             <h1 class="text-3xl md:text-3xl font-bold text-accent-red mb-4">CE Consult wird Teil von BrandVerstand!</h1>
@@ -124,7 +124,7 @@
             <img src="assets/images/ceconsult_icon.png" alt="CE Consult" class="h-12 md:h-16">
 
             <!-- Text -->
-            <p class="text-center text-lg md:text-xl font-medium">
+            <p class="text-center text-accent-red md:text-xl font-medium">
                 Wir bieten Ihnen Kompetenz und umfassende Leistungen für den <br>
                 Brandschutz bei allen Arten von Gebäuden
             </p>
@@ -141,16 +141,22 @@
             <!-- Linker Bereich: Profilbild & Name -->
             <div class="left-section">
                 <img src="assets/images/dMoWaDpiWwCYcGPDtKo3ejJbQape.png" alt="Ralf Michael" class="avatar">
-                <div class="contact-info">
-                    <p class="name">Ralf Michael</p>
-                    <p>📧 <span>Mail</span></p>
-                    <p>📞 <span>Telefon</span></p>
+                <div class="contact-info text-gray-500 mt-6 flex justify-center flex-col items-center">
+                    <p class="name text-xl font-semibold">Ralf Michael</p>
+                    <a href="mailto:ralf.michael@c-erding.de" class="flex items-center space-x-2">
+                        <img src="assets/icons/envelope-solid-2.svg" alt="Mail Icon" class="w-4 h-4">
+                        <span>Mail</span>
+                    </a>
+                    <a href="tel:015778304719" class="flex items-center space-x-2 mt-2">
+                        <img src="assets/icons/phone-solid.svg" alt="Telefon Icon" class="w-4 h-4">
+                        <span>Telefon</span>
+                    </a>
                 </div>
             </div>
 
             <!-- Rechter Bereich: Statement -->
-            <div class="right-section">
-                <p>
+            <div class="right-section ">
+                <p class="text-gray-600 text-lg">
                     Liebe Kunden,<br><br>
                     nach nun mehr als zehnjähriger Tätigkeit als Sachverständiger und Partner bei CE Consult gehe ich ab
                     Februar diesen Jahres neue Wege, wobei die Richtung bleibt.<br><br>
@@ -239,7 +245,7 @@
                                             d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                                     </svg>
                                 </div>
-                                <span class="text-gray-600 text-lg">Nahtlose Projektübergaben</span>
+                                <span class="text-gray-600 text-lg">Nahtlose Projektübernahme</span>
                             </li>
                         </ul>
                     </div>
@@ -334,7 +340,7 @@
                     <div class="text-center md:text-left">
                         <h3 class="text-2xl font-medium text-accent-red mb-6 ">C. Erding & Partner
                         </h3>
-                        <div class="space-y-3 text-gray-900">
+                        <div class="space-y-1.5 text-gray-900">
                             <p class="leading-relaxed">Neue Straße 20<br>
                                 74523 Schwäbisch Hall</p>
                             <p><a href="mailto:info@c-erding.de"
@@ -371,22 +377,27 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-500 text-white py-6 mt-40">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+    <footer class="bg-gray-700 text-white py-8 w-full mt-40">
+        <div
+            class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 text-center md:text-left h-full">
 
             <!-- Linke Seite: Logo & Links -->
-            <div class="flex items-center space-x-6">
+            <div class="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-12">
+                <!-- Logo -->
                 <img src="assets/images/ceconsult_icon.png" alt="CE Consult Logo" class="h-12">
-                <div class="text-sm text-gray-300 space-y-1">
-                    <a href="#" class="hover:underline">Impressum</a><br>
-                    <a href="#" class="hover:underline">Datenschutz</a><br>
-                    <p class="text-gray-200">&copy; 2025 CE Consult</p>
+
+                <!-- Links -->
+                <div
+                    class="text-sm text-gray-300 space-y-1 md:space-y-0 md:space-x-6 flex flex-col md:flex-row items-center">
+                    <p class="text-gray-400">&copy; 2025 CE Consult & BrandVerstand</p>
+                    <a href="impressum.html" class="hover:underline">Impressum</a>
+                    <a href="datenschutz.html" class="hover:underline">Datenschutz</a>
                 </div>
             </div>
 
-            <!-- Rechte Seite: BrandVerstand -->
-            <div class="mt-6 md:mt-0">
-                <img src="assets/images/brandverstand_icon.png" alt="Zertifikate Siegel" class="h-16">
+            <!-- Rechte Seite: BrandVerstand Logo -->
+            <div class="mt-6 md:mt-0 flex items-center">
+                <img src="assets/images/brandverstand_icon.png" alt="Zertifikate Siegel" class="h-14 md:h-16">
             </div>
 
         </div>

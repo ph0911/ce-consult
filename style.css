@@ -166,8 +166,8 @@
 }
 
 .avatar {
-    width: 130px;
-    height: 130px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
@@ -183,16 +183,13 @@
 }
 
 .name {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
+
     margin-bottom: 0.75rem;
 }
 
 .contact-info p {
     margin: 0.4rem 0;
     color: #6b7280;
-    font-size: 0.95rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -201,9 +198,6 @@
 
 .right-section p {
     line-height: 1.7;
-    color: #374151;
-    font-weight: 400;
-    font-size: 0.95rem;
     margin-bottom: 1.2rem;
 }
 

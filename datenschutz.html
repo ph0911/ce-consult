@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz - CE Consult</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="text-gray-900 bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center px-6 py-3">
+            <a href="https://www.c-erding.de" class="flex items-center">
+                <img src="assets/images/ceconsult_logo.png" alt="CE Consult Logo" class="h-10">
+            </a>
+
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="index.html#about" class="nav-link">Über uns</a>
+                <a href="index.html#services" class="nav-link">Leistungen</a>
+                <a href="index.html#locations" class="nav-link">Standorte</a>
+            </nav>
+
+            <a href="mailto:info@c-erding.de" class="hidden md:block bg-accent-gold text-white px-6 py-2 rounded-full text-lg font-medium shadow-md
+               hover:scale-105 hover:shadow-lg active:shadow-inner active:scale-100 transition-all duration-200">
+                Kontakt
+            </a>
+
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <span class="block w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-200"></span>
+                <span class="block w-6 h-0.5 bg-gray-800 mb-1 transition-all duration-200"></span>
+                <span class="block w-6 h-0.5 bg-gray-800 transition-all duration-200"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menü -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white flex flex-col items-center justify-center space-y-6 text-2xl text-gray-900 hidden transition-opacity duration-300">
+        <button id="close-menu" class="absolute top-6 right-6 text-3xl">&times;</button>
+        <a href="index.html#about" class="nav-link-mobile">Über uns</a>
+        <a href="index.html#services" class="nav-link-mobile">Leistungen</a>
+        <a href="index.html#locations" class="nav-link-mobile">Standorte</a>
+        <a href="mailto:info@c-erding.de" class="bg-accent-gold text-white px-6 py-3 rounded-full text-lg font-medium shadow-md 
+     hover:scale-105 hover:shadow-lg active:shadow-inner active:scale-100 transition-all duration-200">
+            Kontakt
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-40 pb-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-3xl font-bold text-accent-gold mb-8">Datenschutzerklärung</h1>
+
+            <div class="space-y-8 text-lg leading-relaxed">
+                <!-- §1 -->
+                <section>
+                    <h2 class="text-2xl font-medium text-accent-red mb-4">§1 Information über die Erhebung
+                        personenbezogener Daten</h2>
+                    <div class="space-y-6">
+                        <p>(1) Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z.B. Name,
+                            Adresse, E-Mail-Adressen.</p>
+
+                        <div class="bg-gray-50 p-6 rounded-2xl">
+                            <p>(2) Verantwortlicher gemäß Artikel 4 Absatz 7 DS-GVO:</p>
+                            <address class="not-italic mt-2">
+                                CEconsult<br>
+                                Hundweilerstraße 25<br>
+                                88131 Lindau am Bodensee<br>
+                                Tel: +49 8382 9748544<br>
+                                <a href="mailto:info@c-erding.de"
+                                    class="text-accent-red hover:underline">info@c-erding.de</a><br>
+                                <a href="https://www.c-erding.de"
+                                    class="text-accent-red hover:underline">www.c-erding.de</a>
+                            </address>
+                            <p class="mt-4">Datenschutzbeauftragter:<br>
+                                <a href="mailto:datenschutz@c-erding.de"
+                                    class="text-accent-red hover:underline">datenschutz@c-erding.de</a>
+                            </p>
+                        </div>
+
+                        <p>(3) Diese Datenschutzerklärung gilt ausschließlich für unsere Website. Für externe Links
+                            verweisen wir auf die Datenschutzbestimmungen der jeweiligen Anbieter.</p>
+                    </div>
+                </section>
+
+                <!-- §2 -->
+                <section class="pt-8 border-t border-gray-200">
+                    <h2 class="text-2xl font-medium text-accent-red mb-4">§2 Ihre Rechte</h2>
+                    <div class="space-y-4">
+                        <p>(1) Sie haben gegenüber uns folgende Rechte:</p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>Auskunft über gespeicherte Daten</li>
+                            <li>Berichtigung unrichtiger Daten</li>
+                            <li>Löschung Ihrer Daten</li>
+                            <li>Einschränkung der Verarbeitung</li>
+                            <li>Datenübertragbarkeit</li>
+                        </ul>
+                        <p>(2) Beschwerderecht bei der Aufsichtsbehörde:<br>
+                            <a href="https://www.bfdi.bund.de"
+                                class="text-accent-red hover:underline">www.bfdi.bund.de</a>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- §3 -->
+                <section class="pt-8 border-t border-gray-200">
+                    <h2 class="text-2xl font-medium text-accent-red mb-4">§3 Daten bei Website-Nutzung</h2>
+                    <div class="space-y-4">
+                        <p>(1) Bei rein informatorischer Nutzung erheben wir nur technisch notwendige Daten:</p>
+                        <ul class="list-disc pl-6 space-y-2 bg-gray-50 p-6 rounded-2xl">
+                            <li>IP-Adresse</li>
+                            <li>Datum/Uhrzeit der Anfrage</li>
+                            <li>Browser-Typ und Version</li>
+                            <li>Betriebssystem</li>
+                            <li>Referrer-URL</li>
+                        </ul>
+                        <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Betriebssicherheit).
+                        </p>
+                    </div>
+                </section>
+
+                <!-- §4 -->
+                <section class="pt-8 border-t border-gray-200">
+                    <h2 class="text-2xl font-medium text-accent-red mb-4">§4 Widerspruchsrecht</h2>
+                    <div class="space-y-4">
+                        <p>(1) Widerruf von Einwilligungen jederzeit möglich.<br>
+                            (2) Widerspruch gegen Datenverarbeitung:<br>
+                            <a href="mailto:datenschutz@c-erding.de"
+                                class="text-accent-red hover:underline">datenschutz@c-erding.de</a>
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Haftung -->
+                <section class="pt-8 border-t border-gray-200">
+                    <h2 class="text-2xl font-medium text-accent-red mb-4">Haftungshinweis</h2>
+                    <p>Wir übernehmen keine Haftung für Inhalte externer Links. Für verlinkte Seiten sind ausschließlich
+                        deren Betreiber verantwortlich.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-700 text-white py-8 w-full">
+        <div
+            class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 text-center md:text-left h-full">
+            <div class="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-12">
+                <img src="assets/images/ceconsult_icon.png" alt="CE Consult Logo" class="h-12">
+                <div
+                    class="text-sm text-gray-300 space-y-1 md:space-y-0 md:space-x-6 flex flex-col md:flex-row items-center">
+                    <p class="text-gray-400">&copy; 2025 CE Consult & BrandVerstand</p>
+                    <a href="impressum.html" class="hover:underline">Impressum</a>
+                    <a href="datenschutz.html" class="hover:underline">Datenschutz</a>
+                </div>
+            </div>
+            <div class="mt-6 md:mt-0 flex items-center">
+                <img src="assets/images/brandverstand_icon.png" alt="Zertifikate Siegel" class="h-14 md:h-16">
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
